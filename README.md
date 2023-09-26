@@ -170,7 +170,6 @@ And part of the sentiment assessment looks like this:
  (['great'], 0.8, 0.75, None),
  (['open'], 0.0, 0.5, None),
  (['nice'], 0.6, 1.0, None),
- (['very'], 0.2, 0.3, None),
  (['long'], -0.05, 0.4, None),
  (['late'], -0.3, 0.6, None),
  (['difficult'], -0.5, 1.0, None),
@@ -210,6 +209,7 @@ But TextBlob indicates it has 0.6 polarity and 1.0
 
 When plotting polarity and subjectivity vs. stars given we see that polarity should be increasing as stars increase but that is not always the case. 
 For example, polarity is higher for 3.75 star rated reviews than for reviews with 4.0 stars.
+
 
 ![textblob_sentiments](/img/textblob_sentiments.png)
 
