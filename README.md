@@ -1,11 +1,11 @@
-### Sentiment Analysis on glassdoor.com data science jobs
+## Sentiment Analysis on glassdoor.com data science jobs
 
-## Project Overview
+### Project Overview
 The goal of this project was to scrape some reviews from glassdoor.com from data science job postings and to analyze company reviews and perform sentiment analysis to understand what users were writing. I also wanted to investigate how the number of stars given to a company related to the sentiment in the review. 
 I wrote an article on my page on [medium.com](https://medium.com/@gabya06/python-sentiment-analysis-using-textblob-and-vader-for-glassdoor-reviews-cc9632babb73) and I also wanted to share the jupyter notebook.
 
 
-## Web Scrapping Glassdoor Data 
+### Web Scrapping Glassdoor Data 
 Since glassdoor.com does not have an available API, I decided to try out web scrapping on a few glassdoor.com machine learning job listings with company reviews.  I was only able to scrape a small amount of reviews before getting the 403 Forbidden Error. To scrape data I used Selenium and BeautifulSoup packages. Below are two of the main functions I used to scrape data using BeatufifulSoup:
 
 
@@ -76,7 +76,7 @@ def get_jobs():
     return data
 ```
 
-## Text Preprocessing
+### Text Preprocessing
 In order to proceed with sentiment analysis, I first had to do some text preprocessing: remove punctuation, numbers and stop words. When working on NLP projects, I am usually a big fan of the NLTK library, but this time I wanted to try out TextBlob. Cleaning text data can be as simple as the below line of code:
 
 ```python
@@ -93,7 +93,7 @@ df.clean_review = df.clean_review.map(lambda x: " ".join([i.lower() for i in x.s
 ```
 
 
-## Data Exploration & Visualization
+### Data Exploration & Visualization
 Once the data is cleaned I can finally move on to the fun part, visualizations! I wanted to create a word cloud of the most frequent words in the reviews, so I created word counts:
 
 ```python
