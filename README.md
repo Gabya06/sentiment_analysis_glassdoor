@@ -1,4 +1,4 @@
-## Sentiment Analysis on glassdoor.com data science jobs
+# Sentiment Analysis on glassdoor.com data science jobs
 
 ### Project Overview
 The goal of this project was to scrape some reviews from glassdoor.com from data science job postings and to analyze company reviews and perform sentiment analysis to understand what users were writing. I also wanted to investigate how the number of stars given to a company related to the sentiment in the review. 
@@ -110,7 +110,7 @@ And what words appear the most?
 "good", "work", "people", "great", "benefits", "culture", "balance", "pay", "management", "life" are all among the top 10 most common words in the dataset. This isnt surprising, I think it represents what most people are looking for in a good work environment. 
 
 
-### WordClouds
+#### WordClouds
 
 Creating wordcloud visualizations are pretty straightforward once you have the word counts:
 
