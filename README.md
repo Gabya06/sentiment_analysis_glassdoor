@@ -211,7 +211,7 @@ But TextBlob indicates it has 0.6 polarity and 1.0
 When plotting polarity and subjectivity vs. stars given we see that polarity should be increasing as stars increase but that is not always the case. 
 For example, polarity is higher for 3.75 star rated reviews than for reviews with 4.0 stars.
 
-![textblob_sentiments](/images/textblob_sentiments.png)
+![textblob_sentiments](/img/textblob_sentiments.png)
 
 ----
 
@@ -246,17 +246,17 @@ Once we get all the compound, positive and negative scores we can plot them each
 
 Since compound scores greater than or equal to 0.5 are considered positive we should see a more linear relationship:
 
-![vader_compoundscores](/images/vader_compoundscores.png)
+![vader_compoundscores](/img/vader_compoundscores.png)
 
 
 Here we see the positive scores vs. stars given: 
 
-![vader_pos_scores](/images/vader_pos_scores.png)
+![vader_pos_scores](/img/vader_pos_scores.png)
 
 
 
 And lastly, here are the negative scores vs. stars given:
-![vader_neg_scores](/images/vader_neg_scores.png)
+![vader_neg_scores](/img/vader_neg_scores.png)
 
 
 
