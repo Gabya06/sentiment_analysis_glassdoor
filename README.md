@@ -145,7 +145,7 @@ TextBlob provides the ability to look at sentiment analysis by breaking it down 
 * TextBlob allows us to see the sentiment for each word using sentiment_assessment, so we can get a better understanding of how words are scored
 
 
-Finding the polarity and subjectivity in a string using TextBlob can be done quite simply:
+Finding the polarity and subjectivity in a string using TextBlob can be done in a few lines of code:
 
 ```python
 sample_string = df.clean_review.iloc[0]
@@ -160,10 +160,13 @@ TextBlob(sample_string).sentiment_assessments[2]
 python output:
 
 Sample Review with 4.1 stars:
-good place retire since benefits good willing sacrifice salary/growth reviews great culture open learning environment reviews nice people work reviews very flexible good work life balance reviews good pay good hours reviews long hours culture staying late reviews difficult maintain good work/life balance reviews bad pay promotion hard get reviews
-TextBlob polarity:0.26 and subjectivity:0.63
+*good place retire since benefits good willing sacrifice salary/growth reviews great culture open learning environment reviews nice people work reviews very flexible good work life balance reviews good pay good hours reviews long hours culture staying late reviews difficult maintain good work/life balance reviews bad pay promotion hard get reviews
+TextBlob polarity:0.26 and subjectivity:0.63*
 
-And part of the sentiment assessment looks like this:
+Note: the above sample review is cleaned: it has stopwords removed, no numbers and stripped whitespaces.
+
+
+Part of the sentiment assessment looks like this. It returns a tuple with (polarity, subjectivity, assessments). We see more negative words "bad", "difficult" and "hard" have negative polarity.
 
 [(['good'], 0.7, 0.60, None),
  (['willing'], 0.25, 0.75, None),
@@ -182,8 +185,8 @@ And part of the sentiment assessment looks like this:
 
 
 ### But can we trust stars given in reviews?
-* We can see that polarity should be increasing as stars increase, but that is not the case.
-* Polarity is higher for 3.75 star rated reviews than for reviews with 4.0 stars.
+* After plotting polarity and stars, we can see that polarity should be increasing as stars increase but this is not the case.
+* Polarity is higher for 3.75 star rated reviews than for reviews with 4.0 stars. This is inconsistent with what we would expect.
 * We also see the review for the "worse" rating of 3.1 does not correspond to a negative review
 
 
@@ -203,7 +206,7 @@ print(f"\nBut TextBlob indicates it has {w_polarity} polarity and {w_subjectivit
 python output:
 
 Epic Pharma LLC with 3.1 has the worse review:
-the people working company nice reviews 'no cons reported glassdoor community
+>the people working company nice reviews 'no cons reported glassdoor community
 
 But TextBlob indicates it has 0.6 polarity and 1.0
 
@@ -235,7 +238,7 @@ sid_obj.polarity_scores(sample_string)
 ```
 
 Here is our sample string:
-'good place retire since benefits good willing sacrifice salary/growth reviews great culture open learning environment reviews nice people work reviews very flexible good work life balance reviews good pay good hours reviews long hours culture staying late reviews difficult maintain good work/life balance reviews bad pay promotion hard get reviews'
+>'good place retire since benefits good willing sacrifice salary/growth reviews great culture open learning environment reviews nice people work reviews very flexible good work life balance reviews good pay good hours reviews long hours culture staying late reviews difficult maintain good work/life balance reviews bad pay promotion hard get reviews'
 
 
 And the sentiment analyzer output:
