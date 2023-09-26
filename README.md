@@ -133,7 +133,7 @@ plt.savefig("review_wordcloud.png")
 plt.show()
 ```
 
-![review_wordcloud](/images/review_wordcloud.png)
+![review_wordcloud](/img/review_wordcloud.png)
 
 --- 
 
